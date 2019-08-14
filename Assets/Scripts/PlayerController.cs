@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController G_PlayerControllerInstance;
     public float m_speed = 5f;
     public float m_retroSpeed = 1f;
     public float m_angularSpeed = 100f;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-
+        G_PlayerControllerInstance = this;
     }
 
     // Update is called once per frame
