@@ -33,7 +33,14 @@ public class PlayerController : MonoBehaviour
             else
                 transform.Translate(0f, vertical_move * m_retroSpeed * Time.deltaTime, 0f);
         }
-
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            m_speed += 10f;
+        }
+        if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            m_speed -= 10f;
+        }
 
     }
 
